@@ -14,11 +14,18 @@ const Login = () => {
                 <h1 className='text-3xl font-bold'><span className='text-primary'>Admin</span> Login</h1>
                 <p className='font-light'>Enter your credentials to access the admin panel</p>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='mt-6 w-full sm:max-w-md text-gray-600'>
+                {/* Email */}
                 <div className='flex flex-col'>
                     <label htmlFor="">Email</label>
                     <input type="email" required placeholder='your email id' className='border-b-2 border-gray-300 p-2 outline-none mb-6' />
                 </div>
+                {/* Password */}
+                <div className='flex flex-col'>
+                    <label htmlFor="">Password</label>
+                    <input type="password" required placeholder='your password' className='border-b-2 border-gray-300 p-2 outline-none mb-6' />
+                </div>
+                <button type='submit' className='w-full py-3 font-medium bg-primary text-white rounded cursor-pointer hover:bg-primary/90 transition-all '>Login</button>
             </form>
         </div>
       </div>
